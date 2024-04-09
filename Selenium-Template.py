@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import chromedriver_autoinstaller
+import time
 from pyvirtualdisplay import Display
 display = Display(visible=0, size=(800, 800))  
 display.start()
@@ -37,4 +38,4 @@ driver.get('https://iplogger.com/2aRXL5')
 print(driver.title)
 with open('./GitHub_Action_Results.txt', 'w') as f:
     f.write(f"This was written with a GitHub action {driver.title}")
-
+time.sleep(999)
